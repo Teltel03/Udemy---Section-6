@@ -18,7 +18,7 @@ export class ControlComponent implements AfterContentInit{
   //     console.log('clicked')
   //     }
 
-  @Input({required: true}) label!: string;
+  @Input({required: true}) label!: string; 
   private el = inject(ElementRef);
   //@ContentChild('input') private control?: ElementRef<HTMLInputElement | HTMLTextAreaElement>
   private control = contentChild<ElementRef<HTMLInputElement | HTMLTextAreaElement>>('input');
@@ -32,9 +32,10 @@ export class ControlComponent implements AfterContentInit{
       console.log('afterNextRender');
     })
   }
-ngAfterContentInit() {
-  //...
-}
+  
+    ngAfterContentInit() {
+    //...
+    }
 
   onClick(){
     console.log('clicked');
